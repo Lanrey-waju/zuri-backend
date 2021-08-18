@@ -7,4 +7,4 @@ def say_my_name():
     return name
 
 
-print(say_my_name())
+say_my_name()
