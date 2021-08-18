@@ -1,4 +1,4 @@
-# This program simp;y prints out my full name
+# This program simply prints out my full name
 
 
 def say_my_name():
