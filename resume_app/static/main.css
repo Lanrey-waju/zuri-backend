@@ -1,3 +1,42 @@
 body {
-  background-color: bisque;
+  background-color: #f4f4f2;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+header {
+  margin: 10px 10px;
+  background-color: #f4f4f2;
+}
+
+/* Classes */
+.education {
+  padding: 15px;
+}
+
+.skill {
+  padding: 15px;
+}
+
+.language {
+  padding: 15px;
+}
+
+.resume {
+  background-color: #bbbfca;
+}
+
+.resume-div {
+  padding: 15px;
+}
+
+.contact {
+  background-color: #495464;
+}
+
+.contact h2 {
+  color: white;
 }

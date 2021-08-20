@@ -1,3 +1,70 @@
 {% extends 'layout.html' %} {% load static %} {% block content %}
-<h1>Hello, World!</h1>
+<header class="sticky-top container-lg">
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-md">
+        <a href="#" class="navbar-brand">Zuri</a>
+        <div class="row">
+          <a href="#" class="nav-link active col-md-6">About Me</a>
+          <a href="#" class="nav-link active col-md-6">Contact Me</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+<div class="container resume">
+  <div class="row resume-div">
+    <div class="col">
+      <h1>Abdulmumin Akinde</h1>
+      <h2>Backend Developer</h2>
+      <p>
+        An energetic and self-driven developer that writes highly maintainable
+        and testable code
+      </p>
+    </div>
+    <div class="col">
+      <div class="container">
+        <div class="row">
+          <a class="col" href="lanreywaju97@gmail.com">Email</a>
+          <a class="col" href="twitter.com">Tweet</a>
+          <a class="col" href="github.com/Lanrey-waju">Github</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="skill">
+    <h2>Skills</h2>
+    <button class="btn btn-lg">Python</button>
+    <button class="btn btn-lg">Django</button>
+    <button class="btn btn-lg">HTML</button>
+    <button class="btn btn-lg">CSS</button>
+    <button class="btn btn-lg">Bootstrap</button>
+    <button class="btn btn-lg">Javascript</button>
+  </div>
+  <div class="education">
+    <h2>Education</h2>
+    <h3>Bachelor of Pharmacy</h3>
+    <h6>Obafemi Awolowo University</h6>
+    <p>2015-2020</p>
+  </div>
+  <div class="container language">
+    <h2>Languages</h2>
+    <div class="row">
+      <div class="col">
+        <h3>English</h3>
+        <p>Full Professional Proficiency</p>
+      </div>
+      <div class="col">
+        <h3>Yoruba</h3>
+        <p>Full Professional Proficiency</p>
+      </div>
+    </div>
+  </div>
+</div>
+<section>
+  <div class="container contact">
+    <h2>Contact Me</h2>
+  </div>
+</section>
+
 {% endblock %}
