@@ -1,5 +1,23 @@
-from django.shortcuts import render
+from django.http import request
+from django.shortcuts import render, redirect
+from .forms import Message_me
+from django.contrib import messages
 
 # Create your views here.
-def say_hello(request):
-  return render(request, 'resume_app/index.html') 
+def contact_me(request):
+    if request.method == "POST":
+        form = Message_me(request.POST)
+        if form.is_valid:
+            form.save()
+            messages.success(
+                request, "Thanks for contacting me. I'll attend to it shortly."
+            )
+            return redirect("home-page")
+        # else:
+        #     form = Message_me()
+        #     return render(request, "resume_app/index.html", {"form": form})
+    form = Message_me()
+    context = {
+        "form": form,
+    }
+    return render(request, "resume_app/index.html", context)
