@@ -10,8 +10,9 @@ class Message_me(forms.ModelForm):
         # fields = "__all__"
         exclude = ["date_received"]
 
-    def clean_subject(self):
-        subject = self.cleaned_data.get("subject")
-        if subject in [entry.subject for entry in UserMessage.objects.all()]:
-            raise ValidationError("Subject already exists")
-        return subject
+    # def clean_subject(self):
+    #     subject = self.cleaned_data.get("subject")
+    #     print(subject)
+    #     if subject in [entry.subject for entry in UserMessage.objects.all()]:
+    #         raise ValidationError("Subject already exists")
+    #     return subject
