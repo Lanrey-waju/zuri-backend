@@ -1,4 +1,5 @@
 from django.http import request
+from django.http.response import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
 from .forms import Message_me
 from django.contrib import messages
@@ -21,3 +22,7 @@ def contact_me(request):
         "form": form,
     }
     return render(request, "resume_app/index.html", context)
+
+
+# def go_to_zuri(request):
+#     return HttpResponseRedirect(request, "www.internship.zuri.team")

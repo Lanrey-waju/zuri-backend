@@ -40,3 +40,14 @@ header {
 .contact h2 {
   color: white;
 }
+
+.main-heading {
+  color: rgb(36, 32, 28);
+  font-style: italic;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  display: block;
+}

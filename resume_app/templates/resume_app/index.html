@@ -4,10 +4,10 @@
   <div>
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-md">
-        <a href="#" class="navbar-brand">Zuri</a>
         <div class="row">
-          <a href="#" class="nav-link active col-md-6">About Me</a>
-          <a href="#" class="nav-link active col-md-6">Contact Me</a>
+          <div class="col-md">
+            <a href="https://internship.zuri.team" target="blank"><img class="logo" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1629079882319/m_TLVY1Rf.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp" alt="zuri-logo" srcset=""></a>
+          </div>
         </div>
       </div>
     </nav>
@@ -24,7 +24,7 @@
 <div class="container resume">
   <div class="row resume-div">
     <div class="col">
-      <h1>Abdulmumin Akinde</h1>
+      <h1 class="main-heading">Abdulmumin Akinde</h1>
       <h2>Backend Developer</h2>
       <p>
         An energetic and self-driven developer that writes highly performant, maintainable, 
@@ -34,10 +34,9 @@
     <div class="col">
       <div class="container">
         <div class="row">
-          <i class="fas fa-envelope-square"></i>
-          <a  class="col" href="lanreywaju97@gmail.com">Email</a>
-          <a class="col" href="twitter.com">Tweet</a>
-          <a class="col" href="github.com/Lanrey-waju">Github</a>
+          <a  class="col" href="#">Email</a>
+          <a class="col" href="#">Tweet</a>
+          <a class="col" href="#">Github</a>
         </div>
       </div>
     </div>
@@ -69,13 +68,19 @@
         <p>Full Professional Proficiency</p>
       </div>
     </div>
+    <div class="row">
+      <div class="col">
+        <h2>Contact Me</h2>
+        <form action="{% url 'home-page' %}" method="POST">
+        <div class="mb-3">{% csrf_token %} {{ form|crispy }}</div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+  </div>
+  </form>
   </div>
 </div>
 <section class="container">
-  <form action="{% url 'home-page' %}" method="POST">
-    {% csrf_token %} {{ form|crispy }}
-    <button type="submit">Submit</button>
-  </form>
+  <h6>Made with Love for HNG | Zuri</h6>
 </section>
 
 {% endblock %}
