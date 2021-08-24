@@ -1,86 +1,64 @@
-{% extends 'layout.html' %} {% load static %} {% load crispy_forms_tags %} 
-{% block content %}
-<header class="sticky-top container-lg">
-  <div>
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container-md">
-        <div class="row">
-          <div class="col-md">
-            <a href="https://internship.zuri.team" target="blank"><img class="logo" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1629079882319/m_TLVY1Rf.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp" alt="zuri-logo" srcset=""></a>
-          </div>
+{% extends 'layout.html' %} {% load static %} 
+{% load crispy_forms_tags %} {% block body %}
+<div class="resume">
+  <div class="resume_left">
+    <div class="work">
+      <h2 class="sub-heading">Work Experience</h2>
+      <div class="work-history">
+        <div class="icon"><i class="fas fa-briefcase"></i></div>
+        <p class="date">07/2021</p>
+        <div class="icon"><i class="fas fa-location-arrow"></i></i></div>
+        <p class="date">BRNO, CZECH REPUBLIC, SHENZHEN, CHINA</p>
+        <div class="work-position">
+          <h3>Software Engineer</h3>
         </div>
+        <p class="date"></p>
       </div>
-    </nav>
-  </div>
-</header>
-{% if messages %} {% for message in messages %}
-<div class="alert alert-{{ message.tags }}">{{ message }}</div>
-{% endfor %} {% endif %}
-<!-- {% if form.errors %}
-  {% for error in form.errors %}
-    {{ error }}
-  {% endfor %}
-{% endif %} -->
-<div class="container resume">
-  <div class="row resume-div">
-    <div class="col">
-      <h1 class="main-heading">Abdulmumin Akinde</h1>
-      <h2>Backend Developer</h2>
-      <p>
-        An energetic and self-driven developer that writes highly performant, maintainable, 
-        and testable code
-      </p>
-    </div>
-    <div class="col">
-      <div class="container">
-        <div class="row">
-          <a  class="col" href="#">Email</a>
-          <a class="col" href="#">Tweet</a>
-          <a class="col" href="#">Github</a>
+      <div class="work-history">
+        <div class="icon"></div>
+        <p class="date">11/2021</p>
+        <div class="icon"></div>
+        <p class="date"></p>
+        <div class="work-position">
+          <h3>Web Developer Kickresume</h3>
         </div>
+        <p class="date">
+          Developing web application for creating beautiful resumes, cover
+          letters, and personal websittes
+        </p>
+      </div>
+      <div class="work-history">
+        <div class="icon"></div>
+        <p class="date"></p>
+        <div class="icon"></div>
+        <p class="date"></p>
+        <div class="work-position"></div>
+        <p class="date"></p>
       </div>
     </div>
   </div>
-  <div class="skill">
-    <h2>Skills</h2>
-    <button class="btn btn-lg">Python</button>
-    <button class="btn btn-lg">Django</button>
-    <button class="btn btn-lg">HTML</button>
-    <button class="btn btn-lg">CSS</button>
-    <button class="btn btn-lg">Bootstrap</button>
-    <button class="btn btn-lg">Javascript</button>
-  </div>
-  <div class="education">
-    <h2>Education</h2>
-    <h3>Bachelor of Pharmacy</h3>
-    <h6>Obafemi Awolowo University</h6>
-    <p>2015-2020</p>
-  </div>
-  <div class="container language">
-    <h2>Languages</h2>
-    <div class="row">
-      <div class="col">
-        <h3>English</h3>
-        <p>Full Professional Proficiency</p>
-      </div>
-      <div class="col">
-        <h3>Yoruba</h3>
-        <p>Full Professional Proficiency</p>
-      </div>
+  <div class="resume_right">
+    <div class="heading">
+      <h1 class="name">Abdulmumin Akinde</h1>
     </div>
-    <div class="row">
-      <div class="col">
-        <h2>Contact Me</h2>
-        <form action="{% url 'home-page' %}" method="POST">
-        <div class="mb-3">{% csrf_token %} {{ form|crispy }}</div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </div>
-  </div>
-  </form>
+    <div class="img-container">
+      <img src="" alt="" />
+    </div>
+    <div class="p_info">
+      <h2>Personal Info</h2>
+    </div>
+    <div class="icon"></div>
+    <p>Nigeria</p>
+    <div class="icon"></div>
+    <p>Lagos, Nigeria</p>
+    <div class="icon"></div>
+    <p>lanreywaju97@gmail.com</p>
+    <div class="icon"></div>
+    <p>task3-zuri.herokuapp.com</p>
+    <div class="skills">
+      <h2>Skills</h2>
+
+    </div>
   </div>
 </div>
-<section class="container">
-  <h6>Made with Love for HNG | Zuri</h6>
-</section>
-
 {% endblock %}
